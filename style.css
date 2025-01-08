@@ -1,0 +1,35 @@
+body{
+    background-image: url('./fond.jpg'); /* Chemin de l'image */
+    background-size: cover; /* L'image couvre toute la page */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Ne répète pas l'image */
+    background-attachment: fixed; /* L'image reste fixe au défilement */
+    color: white; /* Couleur du texte pour un bon contraste */
+    font-family: Arial, sans-serif; /* Police par défaut */
+    margin: 0; /* Retire les marges par défaut du body */
+    height: 100vh; /* Hauteur de la page */
+}
+
+h1,p{
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    font-size:20px;
+}
+
+h2{
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    font-size:20px;
+    font-weight: normal;
+}
+
+button{
+    align-items: center;
+    text-align: center;
+}
+
+footer{
+    align-items: center;
+}
