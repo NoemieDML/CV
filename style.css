@@ -1,35 +1,28 @@
-body{
-    background-image: url('./fond.jpg'); /* Chemin de l'image */
-    background-size: cover; /* L'image couvre toute la page */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Ne répète pas l'image */
-    background-attachment: fixed; /* L'image reste fixe au défilement */
-    color: white; /* Couleur du texte pour un bon contraste */
-    font-family: Arial, sans-serif; /* Police par défaut */
-    margin: 0; /* Retire les marges par défaut du body */
-    height: 100vh; /* Hauteur de la page */
-}
-
-h1,p{
-    align-items: center;
-    text-align: center;
-    color: #000000;
-    font-size:20px;
-}
-
-h2{
-    align-items: center;
-    text-align: center;
-    color: #000000;
-    font-size:20px;
-    font-weight: normal;
-}
-
-button{
-    align-items: center;
-    text-align: center;
-}
-
-footer{
-    align-items: center;
-}
+.bulle {
+    position: relative;
+    display: inline-block;
+    background-color: #f1f1f1;
+    border-radius: 50%;  /* Cela rend la bulle circulaire */
+    overflow: hidden;
+    align-items: left;
+  }
+  
+  .bulle img {
+    width: 200px;  /* Ajustez la taille de l'image */
+    height: 250px; /* Ajustez la taille de l'image */
+    border-radius: 50%; /* Si vous souhaitez une image ronde */
+  }
+  
+  .bulle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Décalage vers le bas pour positionner la queue de la bulle */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f1f1f1; /* La couleur de la bulle */
+  }
+  
