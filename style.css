@@ -1,13 +1,11 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 main {
   box-shadow: 30px 0px 40px rgb(196, 196, 196), -30px 0px 40px rgb(196, 196, 196);
   margin: auto;
   max-width: 900px;
 }
-
 .srkl {
   display: flex;
   justify-content: space-between;
@@ -21,7 +19,6 @@ header {
   color: rgb(0, 0, 0);
   background-color: #916d49;
 }
-
 .photo {
   margin-left: 7%;
   border-radius: 50%;
@@ -31,7 +28,7 @@ header {
 }
 .des{
   margin-left: 25%;
-  margin-top: -10%;
+  margin-top: -14%;
 }   
 h3{
   color: #040404;
@@ -47,7 +44,7 @@ h3{
 .right{
   padding: 0;
   margin: 5px;
-  margin-top: -10%;
+  margin-top: -14%;
 }
 .right p{
  margin-left: 600px;
@@ -117,7 +114,33 @@ strong{
 span{
   margin-left: 10px;
 }
+#Réseaux-sociaux{
+  align-items: center;
+  cursor: pointer;
+}
 #Mes-loisir{
   align-items: center;
   cursor: pointer;
+}
+#Mode-de-transport{
+  align-items: center;
+  cursor: pointer;
+}
+.displayNone{
+  display: none;
+}
+#Mode-de-transport{
+  align-items: center;
+  cursor: pointer;
+}
+#Mes-dépot-github{
+  align-items: center;
+  cursor: pointer;
+}
+.arrow{
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+.lienCv{
+  color: #040404;
 }
