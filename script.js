@@ -38,30 +38,12 @@ addEventListener('click', function() {
 const reposDiv = document.getElementById("repos");
 const display = document.querySelector("#display");
 
-// Jeton d'accès personnel (Remplacez par votre propre jeton sécurisé)git 
 
-// Fonction pour récupérer et afficher les données du profil GitHub
-async function fetchGitHubProfile(username) {
-    try {
-        // Construire le contenu HTML à partir des données du profil
-        const profileHTML = `
-            <a href="${data.html_url}" target="_blank" style="text-decoration: none; color: blue;">View GitHub Profile</a>
-        `;
-        // Insérer le contenu dans la div
-        profileDiv.innerHTML = profileHTML;
-    } catch (error) {
-        profileDiv.innerHTML = `<p>Error: ${error.message}</p>`;
-    }
-}
 
 // Fonction pour récupérer et afficher les dépôts publics GitHub
 async function fetchGitHubRepos(username) {
     try {
-        const response = await fetch(`https://api.github.com/users/${username}/repos`, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        });
+        const response = await fetch(`https://api.github.com/users/${username}/repos`);
         if (!response.ok) {
             throw new Error(`GitHub repos not found: ${response.statusText}`);
         }
@@ -75,7 +57,7 @@ async function fetchGitHubRepos(username) {
                 <div style="margin-bottom: 10px; border: 0px solid #ddd; padding: 10px; border-radius: 5px;">
                     <h3 style="margin: 0;"><a href="${repo.html_url}" target="_blank" style="text-decoration: none; color: #8f6f3f;">${repo.name}</a></h3>
                     <p style="margin: 5px 0;">${repo.description || "No description available."}</p>
-                    <p style="font-size: 12px; color: #555;">Last updated: ${new Date(repo.updated_at).toLocaleDateString()}</p>
+                
                 </div>
             `)
             .join("");
@@ -97,5 +79,4 @@ display.addEventListener("click", async () => {
 
 // Appeler les fonctions avec votre nom d'utilisateur GitHub
 const username = "NoemieDML"; // Remplacez par votre nom d'utilisateur GitHub
-fetchGitHubProfile(username);
 fetchGitHubRepos(username);
