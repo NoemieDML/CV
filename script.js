@@ -38,8 +38,7 @@ addEventListener('click', function() {
 const reposDiv = document.getElementById("repos");
 const display = document.querySelector("#display");
 
-// Jeton d'accès personnel (Remplacez par votre propre jeton sécurisé)
-
+// Jeton d'accès personnel (Remplacez par votre propre jeton sécurisé)git 
 
 // Fonction pour récupérer et afficher les données du profil GitHub
 async function fetchGitHubProfile(username) {
